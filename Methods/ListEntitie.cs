@@ -15,7 +15,7 @@ public class ListEntitie
     };
 
     public List<Producto> _producto = new List<Producto>(){
-        new Producto(){Id = 1, Nombre = "Acetaminofe", PrecioUnit = 12.000, Cantidad = 4, StockMin = 2, StockMax = 10},
+        new Producto(){Id = 1, Nombre = "Acetaminofe", PrecioUnit = 12.000, Cantidad = 4, StockMin = 5, StockMax = 10},
         new Producto(){Id = 2, Nombre = "Acitromicina", PrecioUnit = 15.000, Cantidad = 6, StockMin = 3, StockMax = 12},
         new Producto(){Id = 3, Nombre = "Mecarbajol", PrecioUnit = 20.000, Cantidad = 10, StockMin = 5, StockMax = 20},
         new Producto(){Id = 4, Nombre = "Termanal", PrecioUnit = 25.000, Cantidad = 24, StockMin = 12, StockMax = 30}

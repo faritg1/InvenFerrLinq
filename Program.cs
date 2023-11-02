@@ -6,5 +6,6 @@ internal class Program
     {
         FunctionEntitie entitie = new FunctionEntitie();
         entitie.pregunta1();
+        entitie.pregunta2();
     }
 }

@@ -14,7 +14,21 @@ public class FunctionEntitie
     static List<DetalleFactura> _detalleFactura = entitie._detalleFactura;
 
     public void pregunta1(){
-        var studentAsc = _cliente.OrderBy(s => s.Nombre).ToList();
-        studentAsc.ForEach(tp => Console.WriteLine($"Nombre Ascendente {tp.Nombre}"));
+        var prod = _producto.ToList();
+        prod.ForEach(tp => Console.WriteLine($"Nombre Producto {tp.Nombre}"));
+    }
+
+    public void pregunta2(){
+        var result = _producto.Where(mnr => mnr.Cantidad < mnr.StockMin).ToList();
+        result.ForEach(r => Console.WriteLine($"-------Productos a punto de agotarse {r.Nombre}---------"));
+    }
+
+    public void pregunta3(){
+        var e = from x in _producto 
+                where x.Cantidad < x.StockMin 
+                select new { x.StockMax - x.Cantidad };   
+        foreach (var item in e){
+            Console.WriteLine($"Menores {item}");
+        }
     }
 }
