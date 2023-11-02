@@ -1,7 +1,10 @@
-﻿internal class Program
+﻿using InvenFerrLinq.Methods;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        FunctionEntitie entitie = new FunctionEntitie();
+        entitie.pregunta1();
     }
 }
