@@ -72,6 +72,7 @@ public class Menu
                 break;
                 default:
                     Console.WriteLine("Te Saliste del RANGO");
+                    Console.Write("ESPERE UN MOMENTO ...");
                     Thread.Sleep(2000);
                     Console.Clear();
                 break;
@@ -79,7 +80,7 @@ public class Menu
             }
             catch (Exception ex){
                 Console.WriteLine("ALGO HIZO MAL!!! {0}",ex.Message.ToString());
-                Console.Write("Espere un momento ...");
+                Console.Write("ESPERE UN MOMENTO ...");
                 Thread.Sleep(2000);
                 Console.Clear();
             }
