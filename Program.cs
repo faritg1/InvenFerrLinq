@@ -4,8 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        FunctionEntitie entitie = new FunctionEntitie();
-        entitie.pregunta1();
-        entitie.pregunta2();
+        Menu menu = new Menu();
+        menu.MenuMain();
     }
 }

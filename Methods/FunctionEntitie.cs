@@ -24,11 +24,21 @@ public class FunctionEntitie
     }
 
     public void pregunta3(){
-        var e = from x in _producto 
+        /* var e = from x in _producto 
                 where x.Cantidad < x.StockMin 
                 select new { x.StockMax - x.Cantidad };   
         foreach (var item in e){
             Console.WriteLine($"Menores {item}");
-        }
+        } */
+    }
+
+    public void pregunta4(){
+        
+    }
+    public void pregunta5(){
+
+    }
+    public void pregunta6(){
+
     }
 }
