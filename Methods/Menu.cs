@@ -22,7 +22,7 @@ public class Menu
                 Console.WriteLine("|      5. LISTAR LOS PRODUCTOS VENDIDOS EN UNA DETERMINADA FACTURA      |");
                 Console.WriteLine("|      6. CALCULAR EL VALOR TOTAL DEL INVENTARIO                        |");
                 Console.WriteLine("|      0. Salir                                                         |");
-                Console.WriteLine("|-----------------------------------------------------------------------|");
+                Console.WriteLine("|_______________________________________________________________________|");
                 Console.Write("--> ");
                 op = int.Parse(Console.ReadLine());;
 
@@ -36,31 +36,37 @@ public class Menu
                 break;
                 case 1:
                     entitie.Pregunta1();
+                    Console.Write("Presione [ENTER] para continuar ... ");
                     Console.ReadKey();
                     Console.Clear();
                 break;
                 case 2:
                     entitie.Pregunta2();
+                    Console.Write("Presione [ENTER] para continuar ... ");
                     Console.ReadKey();
                     Console.Clear();
                 break;
                 case 3:
                     entitie.Pregunta3();
+                    Console.Write("Presione [ENTER] para continuar ... ");
                     Console.ReadKey();
                     Console.Clear();
                 break;
                 case 4:
                     entitie.Pregunta4();
+                    Console.Write("Presione [ENTER] para continuar ... ");
                     Console.ReadKey();
                     Console.Clear();
                 break;
                 case 5:
                     entitie.Pregunta5();
+                    Console.Write("Presione [ENTER] para continuar ... ");
                     Console.ReadKey();
                     Console.Clear();
                 break;
                 case 6:
                     entitie.Pregunta6();
+                    Console.Write("Presione [ENTER] para continuar ... ");
                     Console.ReadKey();
                     Console.Clear();
                 break;
@@ -73,6 +79,7 @@ public class Menu
             }
             catch (Exception ex){
                 Console.WriteLine("ALGO HIZO MAL!!! {0}",ex.Message.ToString());
+                Console.Write("Espere un momento ...");
                 Thread.Sleep(2000);
                 Console.Clear();
             }
