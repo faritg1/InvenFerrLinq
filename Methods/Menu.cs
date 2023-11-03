@@ -9,6 +9,7 @@ public class Menu
     public void MenuMain(){
         int op = 0;
         bool entrando = true;
+        FunctionEntitie entitie = new FunctionEntitie();
         do
         {
             try{
@@ -34,28 +35,33 @@ public class Menu
                     entrando = false;
                 break;
                 case 1:
-                    Thread.Sleep(2000);
+                    entitie.Pregunta1();
+                    Console.ReadKey();
                     Console.Clear();
-
                 break;
                 case 2:
-                    Thread.Sleep(2000);
+                    entitie.Pregunta2();
+                    Console.ReadKey();
                     Console.Clear();
                 break;
                 case 3:
-                    Thread.Sleep(2000);
+                    entitie.Pregunta3();
+                    Console.ReadKey();
                     Console.Clear();
                 break;
                 case 4:
-                    Thread.Sleep(2000);
+                    entitie.Pregunta4();
+                    Console.ReadKey();
                     Console.Clear();
                 break;
                 case 5:
-                    Thread.Sleep(2000);
+                    entitie.Pregunta5();
+                    Console.ReadKey();
                     Console.Clear();
                 break;
                 case 6:
-                    Thread.Sleep(2000);
+                    entitie.Pregunta6();
+                    Console.ReadKey();
                     Console.Clear();
                 break;
                 default:

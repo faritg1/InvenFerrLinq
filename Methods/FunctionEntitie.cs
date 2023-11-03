@@ -13,32 +13,43 @@ public class FunctionEntitie
     static List<Factura> _factura = entitie._factura;
     static List<DetalleFactura> _detalleFactura = entitie._detalleFactura;
 
-    public void pregunta1(){
+    public void Pregunta1(){
         var prod = _producto.ToList();
         prod.ForEach(tp => Console.WriteLine($"Nombre Producto {tp.Nombre}"));
     }
 
-    public void pregunta2(){
+    public void Pregunta2(){
         var result = _producto.Where(mnr => mnr.Cantidad < mnr.StockMin).ToList();
         result.ForEach(r => Console.WriteLine($"-------Productos a punto de agotarse {r.Nombre}---------"));
     }
 
-    public void pregunta3(){
-        /* var e = from x in _producto 
-                where x.Cantidad < x.StockMin 
-                select new { x.StockMax - x.Cantidad };   
-        foreach (var item in e){
-            Console.WriteLine($"Menores {item}");
-        } */
+    public void Pregunta3(){
+        var result = _producto.Where(mnr => mnr.Cantidad < mnr.StockMin).ToList();
+        result.ForEach(r => Console.WriteLine($"Productos a comprar: {r.Nombre} ---- Cuantos hay que comprar: {r.StockMax - r.Cantidad}"));
     }
 
-    public void pregunta4(){
-        
+    public void Pregunta4(){
+        var fact = _factura.Where(f => f.Fecha.Month == 01 && f.Fecha.Year == 2023).ToList();
+        fact.ForEach(f => Console.WriteLine($"Nro: {f.NroFactura} -- Fecha: {f.Fecha} -- Total Factura: {f.TotalFactura}"));
     }
-    public void pregunta5(){
+    public void Pregunta5(){
+        var join = _producto.Join(
+            _detalleFactura,
+            prod => prod.Id,
+            det => det.IdProductoFk,
+            (prod, det) => new{
+                producto = prod.Nombre,
+                detalle = det.Valor,
+                detalleF = det.Cantidad
+            }
+        ).ToList();
 
+        join.ForEach(f => Console.WriteLine($"Nombre producto: {f.producto} -- Valor: {f.detalle} -- Cantidad: {f.detalleF}"));
     }
-    public void pregunta6(){
+    public void Pregunta6(){
+        var sum = (from v in _producto
+        select v.PrecioUnit * v.Cantidad).Sum();
 
+        Console.WriteLine($"Total: {sum}");
     }
 }
